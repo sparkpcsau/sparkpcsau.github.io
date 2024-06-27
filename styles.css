@@ -490,8 +490,7 @@ section{
 }
 /*Footer section styles*/
 .footer{
-    margin-top: 2rem;
-    padding-top: 5rem;
+    padding-top: 7rem;
     background-color: var(--purple-solid);
     color: #fff;
     padding-bottom: 5rem;
