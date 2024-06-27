@@ -769,3 +769,6 @@ form .submit:hover{
     background-color: #f44336;
     cursor: pointer;
 }
+.footer-paragraph a:hover{
+    text-decoration: underline;
+}
