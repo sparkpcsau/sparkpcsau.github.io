@@ -490,9 +490,11 @@ section{
 }
 /*Footer section styles*/
 .footer{
-    padding-top: 11rem;
+    margin-top: 2rem;
+    padding-top: 5rem;
     background-color: var(--purple-solid);
     color: #fff;
+    padding-bottom: 5rem;
 }
 .footer-content-brand{
     margin-bottom: 5rem;
@@ -507,6 +509,7 @@ section{
 }
 .social-media{
     margin-top: 2.5rem;
+    display: flex;
 
 }
 .sm-link{
