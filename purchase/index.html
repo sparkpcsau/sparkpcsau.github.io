@@ -43,6 +43,9 @@
                         <a href="../budgetbuild" class="nav-link">Budget Build</a>
                     </li>
                     <li class="nav-item">
+                        <a href="../consulting" class="nav-link">Consulting</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="../purchase" class="nav-link">Purchase</a>
                     </li>
                 </ul>
@@ -56,19 +59,20 @@
     <div class="purchaseform">
         <form action="https://formspree.io/f/xwpeezjr" method="POST" class="form">
             <label>
-                Your email:
+                Your email*:
                 <br>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
             </label>
             <br>
             <br>
             <label>
-                Service Option:
+                Service Option*:
                 <br>
-                <select name="serviceoption">
+                <select name="serviceoption" required>
                     <option value="purchase">Purchase PC</option>
                     <option value="budget">Budget Build</option>
                     <option value="custom">Custom PC</option>
+                    <option value="consulting">PC Consulting</option>
                   </select>
             </label>
             <br>
@@ -109,6 +113,7 @@
                 Windows Version:
                 <br>
                 <select name="windowsoption">
+                    <option value="na">Not Applicable</option>
                     <option value="unactivated">Unactivated(Default)</option>
                     <option value="activated">Activated(+$20)</option>
                 </select>
@@ -119,9 +124,22 @@
                 Cable Extensions:
                 <br>
                 <select name="cableextensions">
+                    <option value="na">Not Applicable</option>
                     <option value="none">None(Default)</option>
                     <option value="black">Black(+$40)</option>
                     <option value="white">White(+$40)</option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <label>
+                PC Consulting Type(if applicable):
+                <br>
+                <select name="consultingoption">
+                    <option value="na">Not Applicable</option>
+                    <option value="list">PC Part List</option>
+                    <option value="upgrade">PC Upgrade Plan</option>
+                    <option value="package">PC Building Package</option>
                 </select>
             </label>
             <br>
@@ -162,13 +180,14 @@
             <br>
             <br>
             <label>
-                Your message(preferred parts, further edits, etc.):
+                Your message(what do I need to know, preferred parts, further edits, etc.)*:
                 <br>
-                <textarea name="message" style="font-family:'Be Vietnam Pro', sans-serif"></textarea>
+                <textarea name="message" style="font-family:'Be Vietnam Pro', sans-serif" required></textarea>
             </label>
         <!-- your other form fields go here -->
         <br>
             <button type="submit" class="btn" style="display: block; margin: 0 auto;">Send</button>
+            *required form
         </form>
     </div>
     
