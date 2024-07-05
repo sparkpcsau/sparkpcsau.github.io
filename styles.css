@@ -680,7 +680,9 @@ section{
 .room-image{
     border-radius: 16px;
 
-    width: auto;/*placeholder*/
+    width: auto;
+    height: 256px;
+    object-fit: contain;
 }
 .special-image{
     width: 25%;
