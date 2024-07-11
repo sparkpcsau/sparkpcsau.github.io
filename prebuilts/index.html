@@ -4,12 +4,12 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Consulting</title>
+    <title>Prebuilts</title>
     <!--Font awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://kit.fontawesome.com/45a854fa82.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/styles.css">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
@@ -56,38 +56,48 @@
             </nav>
         </div>
     </header>
-    <h5 class="section-head">
-        <span class="heading">Consulting</span>
-    </h5>
-    <div class="cons-container">
-        <div class="cons-options">
-            <h1>PC Parts List</h1>
-            <br>
-            <p>Looking to build your own PC but need some guidance? We got you covered! We will work directly with you so that you get the best parts for your next build. Whether you need an all out top of the line PC or a ultra budget PC, we'll help you from start to finish.</p>
-            <br>
-            <h1 class="cons-price">$50</h1>
-        </div>
-        <div class="cons-options">
-            <h1>PC Upgrade Plan</h1>
-            <br>
-            <p>Looking to upgrade your PC but don't know where to start? We got your back. We will work directly with you and your needs in order for you to take the best course of action when upgrading your PC.</p>
-            <br>
-            <h1 class="cons-price">$50</h1>
-        </div>
-        <div class="cons-options">
-            <h1>PC Building Package</h1>
-            <br>
-            <p>Do you need someone to build your dream PC but don't want to do the work? We can do just that. We will research, pick, buy and build your PC for you from start to finish. All you have to do is sit back and relax.</p>
-            <br>
-            <h1 class="cons-price">$100</h1>
-        </div>
-    </div>
-    <footer class="footer" style="margin-top: 4rem; ">
+    <section class="rooms">
+        <div class="container">
+            <h5 class="section-head">
+                <span class="heading">Prebuilt PCs</span>
+                <h2 style="text-align: center; margin-bottom: 5rem;" class="minititle">Ready To Go</h2>
+            </h5><br>
+            <div class="grid rooms-grid">
+                <div class="grid-item featured-rooms">
+                    <div class="image-wrap">
+                        <img class="room-image" src="images/PCBuild1.jpg" alt="">
+                        <h1 class="room-name">Core i5-12400f <br> Nvidia RTX 4060</h1>
+                    </div>
+                    <div class="room-info-wrap">
+                        <span class="room-price">$1200</span>
+                        <br>
+                        <button type="button" class="collapsible">Parts</button>
+                        <div class="content">
+                        <ul class="infolist">
+                            <li>Intel Core i5-12400f</li>
+                            <li>Asus B660m-a WIFI</li>
+                            <li>16GB(2x8GB) DDR4 RGB Ram @3600MHz</li>
+                            <li>RTX 4060 (MSI Ventus 2x OC)</li>
+                            <li>1TB NVME Gen4 SSD (Crucial P3 plus) </li>
+                            <li>Deepcool PK650D 650W</li>
+                            <li>Deepcool AG400BK ARGB</li>
+                            <li>Deepcool CC360 ARGB (incl.3x RGB Fans)</li>
+                        </ul>
+                        </div>
+                        <br>
+                        <br>
+                        <a class="buypc" href="https://www.facebook.com/marketplace/item/777656787914239/">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </section>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-content-brand">
                     <a href="../" class="logo">
-                        <img class="logo-image" src="logo.png" alt="" width="100px">
+                        <img class="logo-image" src="../logo.png" alt="" width="100px">
                     </a>
                     <div class="footer-paragraph">
                        Spark PCs
@@ -114,6 +124,22 @@
             </div>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for(i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if(content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+    <script src="../main.js"></script>
 </body>
 </html>
